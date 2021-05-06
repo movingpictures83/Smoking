@@ -1,0 +1,6 @@
+OTU	PhyloSeq/otu_table.filtered.reordered.csv
+TAX	PhyloSeq/tax_table.filtered.csv
+META	PhyloSeq/sample_data.csv
+threshold	50
+OTUFilter	otu_table.final.csv
+TAXFilter	tax_table.final.csv
