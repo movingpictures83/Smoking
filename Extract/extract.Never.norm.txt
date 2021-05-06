@@ -1,0 +1,3 @@
+inputfile	Smoking.abund.all.norm.withmeta.screened.csv
+column	3202
+value	Never
