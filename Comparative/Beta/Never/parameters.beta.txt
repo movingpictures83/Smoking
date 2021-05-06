@@ -1,0 +1,3 @@
+mapfile	../../../Qiime/Fasting_Map.txt
+tsvfile	../beta_div/unweighted_unifrac_Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.0.03.txt
+group	Never
