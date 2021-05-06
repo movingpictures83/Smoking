@@ -1,0 +1,4 @@
+otu	../../PhyloSeq/otu_table.final.csv
+tax	../../PhyloSeq/tax_table.final.csv
+meta	../../PhyloSeq/sample_data.csv
+Description	Never
