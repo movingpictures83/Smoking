@@ -1,0 +1,13 @@
+Prefix pipelines/Smoking/
+#Plugin MothurFilter inputfile Parameters/parameters.mothurfilter.txt outputfile Mothur/
+#Plugin Mothur inputfile Mothur/Mothur2Qiime.mothur outputfile none
+#Plugin BetaDiversity inputfile Parameters/parameters.betadiversity.txt outputfile Comparative/Beta/beta_div/
+#Plugin PlotBetaDiversity3D inputfile Parameters/parameters.plotbetadiversity3D.txt outputfile Comparative/Beta/beta_div_3D_plots/
+
+Kitty Comparative/Beta/Active
+Plugin PCPoints inputfile parameters.pcpoints.txt outputfile pcpoints.tsv
+Kitty Comparative/Beta/Former
+Plugin PCPoints inputfile parameters.pcpoints.txt outputfile pcpoints.tsv
+Kitty Comparative/Beta/Never
+Plugin PCPoints inputfile parameters.pcpoints.txt outputfile pcpoints.tsv
+

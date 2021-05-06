@@ -1,0 +1,5 @@
+Plugin MIQ inputfile Smoking.abund.all.tossed.csv outputfile Smoking.abund.MIQ.txt
+Plugin OTURecover inputfile Smoking.abund.all.tossed.csv outputfile Smoking.OTURecover.txt
+Plugin Unclassified inputfile Smoking.abund.all.tossed.csv outputfile Smoking.Unclassified.txt
+Plugin Social inputfile ../../Parameters/parameters.social.txt outputfile Smoking.social.txt
+Plugin Rival inputfile ../../Parameters/parameters.rival.txt outputfile Smoking.rival.txt

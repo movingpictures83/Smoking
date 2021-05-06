@@ -1,0 +1,3 @@
+Prefix pipelines/Smoking/
+#Pipeline pipelines/Smoking/config.metagenomics.txt
+Pipeline pipelines/Smoking/config.downstream.txt

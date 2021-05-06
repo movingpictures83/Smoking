@@ -1,0 +1,19 @@
+Prefix pipelines/Smoking/
+
+Plugin TaxaQuery inputfile Parameters/parameters.taxaquery.txt outputfile Smoking.abund.halomonas.csv
+Plugin AlphaStats inputfile Comparative/Alpha/richness.csv outputfile stats.richness.tsv
+Plugin AlphaStats inputfile Comparative/Alpha/diversity.csv outputfile stats.diversity.tsv
+Plugin SequenceLength inputfile Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.0.03.rep.fasta outputfile stats.seqlength.txt
+Kitty Individual/Active
+Pipeline pipelines/Smoking/config.stats.groups.txt
+Kitty Individual/Former
+Pipeline pipelines/Smoking/config.stats.groups.txt
+Kitty Individual/Never
+Pipeline pipelines/Smoking/config.stats.groups.txt
+Kitty Comparative/Beta/Active
+Pipeline pipelines/Smoking/config.stats.betadiv.txt
+Kitty Comparative/Beta/Former
+Pipeline pipelines/Smoking/config.stats.betadiv.txt
+Kitty Comparative/Beta/Never
+Pipeline pipelines/Smoking/config.stats.betadiv.txt
+

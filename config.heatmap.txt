@@ -1,0 +1,10 @@
+Prefix pipelines/Smoking
+Kitty Individual/Active/
+Plugin CSVUnPad inputfile Smoking.sparcc.mcl.sortedcorrelations.csv outputfile Smoking.sparcc.mcl.sortedcorrelations.unpadded.csv
+Plugin Heatmap inputfile Smoking.sparcc.mcl.sortedcorrelations.unpadded.csv outputfile Smoking.heatmap
+Kitty Individual/Former/
+Plugin CSVUnPad inputfile Smoking.sparcc.mcl.sortedcorrelations.csv outputfile Smoking.sparcc.mcl.sortedcorrelations.unpadded.csv
+Plugin Heatmap inputfile Smoking.sparcc.mcl.sortedcorrelations.unpadded.csv outputfile Smoking.heatmap
+Kitty Individual/Never/
+Plugin CSVUnPad inputfile Smoking.sparcc.mcl.sortedcorrelations.csv outputfile Smoking.sparcc.mcl.sortedcorrelations.unpadded.csv
+Plugin Heatmap inputfile Smoking.sparcc.mcl.sortedcorrelations.unpadded.csv outputfile Smoking.heatmap

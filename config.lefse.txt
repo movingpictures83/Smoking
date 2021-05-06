@@ -1,0 +1,3 @@
+Prefix pipelines/Smoking/
+Plugin PhyloSeq2LEfSe inputfile Parameters/parameters.phyloseq2lefse.txt outputfile PhyloSeq/otus.lefse.txt
+Plugin LEfSe inputfile Parameters/parameters.lefse.txt outputfile Comparative/LEfSe/Smoking.lefse

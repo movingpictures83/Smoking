@@ -1,0 +1,3 @@
+Plugin CSVMerge inputfile merge.tossed.txt outputfile Smoking.abund.all.tossed.csv
+Plugin DESeq inputfile ../../../Parameters/parameters.deseq.txt outputfile Smoking.deseq.csv
+Plugin DESeq2TXT inputfile parameters.deseq2txt.txt outputfile Smoking.deseq.txt

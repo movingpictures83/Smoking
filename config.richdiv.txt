@@ -1,0 +1,3 @@
+Prefix pipelines/Smoking/
+Plugin Richness inputfile Parameters/parameters.richness.txt outputfile Comparative/Alpha/richness
+Plugin Richness inputfile Parameters/parameters.diversity.txt outputfile Comparative/Alpha/diversity

@@ -1,0 +1,14 @@
+Prefix pipelines/Smoking/
+Kitty Individual/Active/
+Plugin CSVUnPad inputfile Smoking.sparcc.thresholded.quoted.csv outputfile Smoking.sparcc.thresholded.quoted.unpadded.csv
+Plugin MCL inputfile Smoking.sparcc.thresholded.quoted.unpadded.csv outputfile Smoking.sparcc.mcl
+Plugin ClusterCSV2NOA inputfile Smoking.sparcc.mcl.sortedclusters.csv outputfile Smoking.sparcc.mcl.sortedclusters.noa
+Kitty Individual/Former/
+Plugin CSVUnPad inputfile Smoking.sparcc.thresholded.quoted.csv outputfile Smoking.sparcc.thresholded.quoted.unpadded.csv
+Plugin MCL inputfile Smoking.sparcc.thresholded.quoted.unpadded.csv outputfile Smoking.sparcc.mcl
+Plugin ClusterCSV2NOA inputfile Smoking.sparcc.mcl.sortedclusters.csv outputfile Smoking.sparcc.mcl.sortedclusters.noa
+Kitty Individual/Never/
+Plugin CSVUnPad inputfile Smoking.sparcc.thresholded.quoted.csv outputfile Smoking.sparcc.thresholded.quoted.unpadded.csv
+Plugin MCL inputfile Smoking.sparcc.thresholded.quoted.unpadded.csv outputfile Smoking.sparcc.mcl
+Plugin ClusterCSV2NOA inputfile Smoking.sparcc.mcl.sortedclusters.csv outputfile Smoking.sparcc.mcl.sortedclusters.noa
+

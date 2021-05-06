@@ -1,0 +1,35 @@
+Prefix pipelines/Smoking/
+
+
+#Pipeline pipelines/Smoking/config.bar.txt
+#Pipeline pipelines/Smoking/config.krona.txt
+
+#Kitty Comparative/PLSDA/Active-Former
+#Pipeline pipelines/Smoking/config.plsda.txt
+#Kitty Comparative/PLSDA/Active-Never
+#Pipeline pipelines/Smoking/config.plsda.txt
+#Kitty Comparative/PLSDA/Former-Never
+#Pipeline pipelines/Smoking/config.plsda.txt
+#Kitty Comparative/PLSDA/All
+#Pipeline pipelines/Smoking/config.plsda.txt
+
+#Pipeline pipelines/Smoking/config.heatmap.txt
+
+#Kitty Individual/Active
+#Pipeline pipelines/Smoking/config.networks.txt
+#Kitty Individual/Former
+#Pipeline pipelines/Smoking/config.networks.txt
+#Kitty Individual/Never
+#Pipeline pipelines/Smoking/config.networks.txt
+
+#Pipeline pipelines/Smoking/config.lefse.txt
+#Pipeline pipelines/Smoking/config.richdiv.txt
+
+#Kitty Comparative/DESeq2/Active-Former
+#Pipeline pipelines/Smoking/config.deseq.txt
+#Kitty Comparative/DESeq2/Active-Never
+#Pipeline pipelines/Smoking/config.deseq.txt
+#Kitty Comparative/DESeq2/Former-Never
+#Pipeline pipelines/Smoking/config.deseq.txt
+
+Pipeline pipelines/Smoking/config.pcoa.txt

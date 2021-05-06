@@ -1,0 +1,7 @@
+Prefix pipelines/Smoking/
+Kitty Individual/Active/
+Plugin Krona inputfile ../../Parameters/parameters.krona.txt outputfile Phylogeny/krona
+Kitty Individual/Former/
+Plugin Krona inputfile ../../Parameters/parameters.krona.txt outputfile Phylogeny/krona
+Kitty Individual/Never/
+Plugin Krona inputfile ../../Parameters/parameters.krona.txt outputfile Phylogeny/krona

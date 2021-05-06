@@ -1,0 +1,7 @@
+Prefix pipelines/Smoking
+Kitty Individual/Active/
+Plugin Bar inputfile ../../Parameters/parameters.phylum.bar.txt outputfile Barplot/barplot
+Kitty Individual/Former/
+Plugin Bar inputfile ../../Parameters/parameters.phylum.bar.txt outputfile Barplot/barplot
+Kitty Individual/Never/
+Plugin Bar inputfile ../../Parameters/parameters.phylum.bar.txt outputfile Barplot/barplot

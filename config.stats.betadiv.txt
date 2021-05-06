@@ -1,0 +1,2 @@
+Plugin IntraGroup inputfile parameters.beta.txt outputfile betadiversity.within.txt
+Plugin InterGroup inputfile parameters.beta.txt outputfile betadiversity.outside.txt

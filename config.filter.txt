@@ -1,0 +1,4 @@
+Plugin CSVRemove inputfile ../../Remove/remove.txt outputfile Smoking.abund.all.csv
+Plugin CSVRemove inputfile ../../Remove/remove.norm.txt outputfile Smoking.abund.all.norm.csv
+Plugin CSVToss inputfile ../../Parameters/parameters.toss.absolute.txt outputfile Smoking.abund.all.tossed.csv
+Plugin CSVToss inputfile ../../Parameters/parameters.toss.txt outputfile Smoking.abund.all.norm.tossed.csv

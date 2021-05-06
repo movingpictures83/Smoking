@@ -1,0 +1,6 @@
+Prefix pipelines/Smoking/
+
+#Pipeline pipelines/Smoking/config.setup.txt
+Pipeline pipelines/Smoking/config.figures.txt
+#Pipeline pipelines/Smoking/config.tables.txt
+Pipeline pipelines/Smoking/config.stats.txt

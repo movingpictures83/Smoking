@@ -1,0 +1,31 @@
+# SPARCC
+#Plugin CSVTranspose inputfile Smoking.abund.all.tossed.csv outputfile Smoking.abund.all.tossed.transpose.csv
+#Plugin CSV2TSV inputfile Smoking.abund.all.tossed.transpose.csv outputfile Smoking.abund.all.tossed.transpose.tsv
+#Plugin TSVPerturb inputfile Smoking.abund.all.tossed.transpose.tsv outputfile Smoking.abund.all.tossed.transpose.perturb.tsv
+#Plugin SparCC inputfile Smoking.abund.all.tossed.transpose.perturb.tsv outputfile Smoking.sparcc.unthresholded.csv
+#Plugin SparCC inputfile Smoking.abund.all.tossed.transpose.perturb.tsv outputfile Smoking.sparcc.thresholded.csv
+
+# CLUSTERING
+#Plugin CSVQuote inputfile Smoking.sparcc.thresholded.csv outputfile Smoking.sparcc.thresholded.quoted.csv
+#Plugin CSVUnPad inputfile Smoking.sparcc.thresholded.quoted.csv outputfile Smoking.sparcc.thresholded.quoted.unpadded.csv
+#Plugin MCL inputfile Smoking.sparcc.thresholded.quoted.unpadded.csv outputfile Smoking.sparcc.mcl
+#Plugin ClusterCSV2NOA inputfile Smoking.sparcc.mcl.sortedclusters.csv outputfile Smoking.sparcc.mcl.sortedclusters.noa
+
+# FOR CYTOSCAPE
+#Plugin CSV2GML inputfile Smoking.sparcc.thresholded.quoted.csv outputfile Smoking.sparcc.thresholded.quoted.gml
+#Plugin Abundance inputfile Smoking.abund.all.norm.tossed.csv outputfile Smoking.averageabund.noa
+
+# SOCIAL CLUBS
+#Plugin CSVUnPad inputfile Smoking.sparcc.unthresholded.quoted.csv outputfile Smoking.sparcc.unthresholded.quoted.unpadded.csv
+#Plugin Tightness inputfile ../../Parameters/parameters.tightness.txt outputfile Tightness
+#Plugin TightnessStatistics inputfile Tightness outputfile tightness.stats.csv
+
+# RIVAL CLUBS
+Plugin CSVNeg2Pos inputfile Smoking.sparcc.thresholded.quoted.csv outputfile Smoking.sparcc.thresholded.quoted.onlypositive.csv
+Plugin CSVUnPad inputfile Smoking.sparcc.thresholded.quoted.onlypositive.csv outputfile Smoking.sparcc.thresholded.quoted.onlypositive.unpadded.csv
+Plugin MCL inputfile Smoking.sparcc.thresholded.quoted.onlypositive.unpadded.csv outputfile Smoking.sparcc.thresholded.quoted.onlypositive.unpadded.mcl
+Plugin Copy inputfile Smoking.sparcc.thresholded.quoted.onlypositive.unpadded.mcl.sortedclusters.csv outputfile Smoking.sparcc.thresholded.quoted.clusters.csv
+Plugin Clusterize inputfile Smoking.sparcc.thresholded.quoted outputfile Smoking.sparcc.thresholded.quoted.onlyclusters.csv
+Plugin CSVNeg2Zero inputfile Smoking.sparcc.thresholded.quoted.onlyclusters.csv outputfile Smoking.sparcc.thresholded.quoted.onlypositive.onlyclusters.csv
+Plugin CSVUnPad inputfile Smoking.sparcc.thresholded.quoted.onlypositive.onlyclusters.csv outputfile Smoking.sparcc.thresholded.quoted.onlypositive.onlyclusters.unpadded.csv
+Plugin MCL inputfile Smoking.sparcc.thresholded.quoted.onlypositive.onlyclusters.unpadded.csv outputfile Smoking.mcl.rivalclubs
