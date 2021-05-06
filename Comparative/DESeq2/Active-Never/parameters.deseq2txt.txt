@@ -1,0 +1,5 @@
+taxa	Smoking.abund.all.tossed.csv
+deseq	Smoking.deseq.csv
+group1	Active
+group2	Never
+pvalue	0.05
