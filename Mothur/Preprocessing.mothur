@@ -1,0 +1,85 @@
+#Set input and output directories
+set.dir(tempdefault=~/mothur/reference/)
+set.dir(output=pipelines/Smoking/Mothur/)
+
+#Set current files
+set.current(fasta=pipelines/Smoking/Mothur/Smoking.fna, name=pipelines/Smoking/Mothur/Smoking.names, group=pipelines/Smoking/Mothur/Smoking.groups, processors=32)
+
+#Produce a summary of initial data
+summary.seqs(fasta=current, name=current, processors=32)
+
+#Eliminate duplicate reads
+list.seqs(fasta=current)
+get.seqs(fasta=current, accnos=current)
+unique.seqs(fasta=current, name=current)
+summary.seqs(fasta=current, name=current, processors=32)
+
+
+#Align sequences
+#align.seqs(fasta=current, reference=pipelines/Smoking/silva.bacteria.2012.fasta, flip=t, threshold=0.5, processors=32)
+#align.seqs(fasta=current, reference=pipelines/Smoking/silva.seed_v138.align, flip=t, threshold=0.5, processors=32)
+#align.seqs(fasta=current, reference=pipelines/Smoking/silva.seed_v119.align, flip=t, threshold=0.5, processors=32)
+align.seqs(fasta=current, reference=pipelines/Smoking/SILVA/silva.seed_v132.align, flip=t, threshold=0.5, processors=32)
+#align.seqs(fasta=current, reference=pipelines/Smoking/silva.bacteria.fasta, flip=t, threshold=0.5, processors=32)
+
+#summary.seqs(fasta=current, name=current, processors=32)
+#set.dir(debug=t)
+#Eliminate reads outside of the main alignment space
+screen.seqs(fasta=current, name=current, group=current, optimize=start-end, criteria=85, processors=32)
+#screen.seqs(fasta=current, name=current, group=current, start=6388, end=16413, processors=32)
+summary.seqs(fasta=current, name=current, processors=32)
+
+#Remove empty columns and any new duplicates created
+filter.seqs(fasta=current, vertical=T, processors=32)
+summary.seqs(fasta=current, name=current)
+unique.seqs(fasta=current, name=current)
+summary.seqs(fasta=current, name=current, processors=32)
+
+#Remove reads typical of 454 errors
+list.seqs(name=current)
+#get.seqs(accnos=current, group=current)
+#summary.seqs(fasta=current, name=current, processors=32)
+pre.cluster(fasta=current, name=current, group=current, diffs=2, processors=32)
+#get.seqs(accnos=current, #name=current)
+# BUG HAPPENS HERE.  FASTA AND NAME FILE START DIFFERING IN LENGTH
+# Does not output an updated name file, only a count tabl
+deunique.seqs(fasta=current, count=current)
+unique.seqs(fasta=current)
+summary.seqs(fasta=current, name=current, processors=32)
+#name=current, processors=32)
+
+#Eliminate chimeras
+chimera.uchime(fasta=current, name=current, group=current, processors=32)
+#get.seqs(accnos=current, name=current)
+remove.seqs(accnos=current, fasta=current, name=current, group=current, dups=T)
+summary.seqs(fasta=current, name=current, processors=32)
+#chimera.uchime(fasta=current, name=current, group=current, processors=32)
+#remove.seqs(accnos=current, fasta=current, name=current, group=current, dups=T)
+#summary.seqs(fasta=current, name=current, processors=32)
+
+#Set current taxonomy files
+#set.current(taxonomy=pipelines/Smoking/silva.nr_v138.tax)
+set.current(taxonomy=pipelines/Smoking/SILVA/silva.nr_v132.tax)
+#set.current(taxonomy=pipelines/Smoking/silva.nr_v119.tax)
+#set.current(taxonomy=pipelines/Smoking/mothur_rdp_trainset.current.tax)
+#set.current(taxonomy=pipelines/Smoking/trainset18_062020.rdp.tax)
+#set.current(taxonomy=pipelines/Smoking/silva.bacteria.2012.tax)
+
+#Classify reads by mapping to taxonomy database
+#classify.seqs(fasta=current, name=current, group=current, template=pipelines/Smoking/mothur_rdp_trainset.current.fasta, taxonomy=current, cutoff=60, processors=32)
+#classify.seqs(fasta=current, name=current, group=current, template=pipelines/Smoking/silva.nr_v138.align, taxonomy=current, cutoff=60, processors=32)
+#classify.seqs(fasta=current, name=current, group=current, template=pipelines/Smoking/silva.nr_v119.align, taxonomy=current, cutoff=60, processors=32)
+classify.seqs(fasta=current, name=current, group=current, template=pipelines/Smoking/SILVA/silva.nr_v132.align, taxonomy=current, cutoff=60, processors=32)
+#classify.seqs(fasta=current, name=current, group=current, template=pipelines/Smoking/trainset18_062020.rdp.fasta, taxonomy=current, cutoff=60, processors=32)
+#classify.seqs(fasta=current, name=current, group=current, template=pipelines/Smoking/silva.bacteria.2012.fasta, taxonomy=current, cutoff=60, processors=32)
+
+summary.seqs(fasta=current, name=current, processors=32)
+#classify.seqs(fasta=current, name=current, group=current, template=pipelines/Smoking/silva.nr_v138.align, taxonomy=current, cutoff=0, processors=32)
+#summary.seqs(fasta=current, name=current, processors=32)
+
+#Eliminate suspected human and mitochondrial contamination
+#remove.lineage(fasta=current, name=current, group=current, taxonomy=current, taxon=Eukaryota;-Bacteria(99);-Archaea(99);-unclassified;unclassified;unclassified;unclassified;unclassified;-unknown-Mitochondria-Cyanobacteria_Chlorplast)
+remove.lineage(fasta=current, name=current, group=current, taxonomy=current, taxon=Chloroplast-Mitochondria-Unclassified-Archaea-Eukaryota)
+summary.seqs(fasta=current, name=current, processors=32)
+#remove.lineage(fasta=current, name=current, group=current, taxonomy=current, taxon=Eukaryota;-Bacteria(99);-Archaea(99);-unclassified;unclassified;unclassified;unclassified;unclassified;-unknown-Mitochondria-Cyanobacteria_Chlorplast)
+#summary.seqs(fasta=current, name=current, processors=32)

@@ -1,0 +1,12 @@
+#Set input and output directories
+set.dir(tempdefault=~/mothur/reference)
+set.dir(output=pipelines/Smoking/Mothur)
+
+#Merge FASTA files
+merge.files(input=pipelines/Smoking/Pools/Pool_06/shhh/Pool_06.shhh.trim.fasta-pipelines/Smoking/Pools/Pool_07/shhh/Pool_07.shhh.trim.fasta-pipelines/Smoking/Pools/Pool_08/shhh/Pool_08.shhh.trim.fasta-pipelines/Smoking/Pools/Pool_09/shhh/Pool_09.shhh.trim.fasta-pipelines/Smoking/Pools/Pool_10/shhh/Pool_10.shhh.trim.fasta, output=pipelines/Smoking/Mothur/Smoking.fna)
+
+#Merge Group files
+merge.files(input=pipelines/Smoking/Pools/Pool_06/shhh/Pool_06.shhh.groups-pipelines/Smoking/Pools/Pool_07/shhh/Pool_07.shhh.groups-pipelines/Smoking/Pools/Pool_08/shhh/Pool_08.shhh.groups-pipelines/Smoking/Pools/Pool_09/shhh/Pool_09.shhh.groups-pipelines/Smoking/Pools/Pool_10/shhh/Pool_10.shhh.groups, output=pipelines/Smoking/Mothur/Smoking.groups)
+
+#Merge Names files
+merge.files(input=pipelines/Smoking/Pools/Pool_06/shhh/Pool_06.shhh.trim.names-pipelines/Smoking/Pools/Pool_07/shhh/Pool_07.shhh.trim.names-pipelines/Smoking/Pools/Pool_08/shhh/Pool_08.shhh.trim.names-pipelines/Smoking/Pools/Pool_09/shhh/Pool_09.shhh.trim.names-pipelines/Smoking/Pools/Pool_10/shhh/Pool_10.shhh.trim.names, output=pipelines/Smoking/Mothur/Smoking.names)

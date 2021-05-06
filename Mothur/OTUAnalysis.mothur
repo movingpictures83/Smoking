@@ -1,0 +1,40 @@
+#Output File Names:
+#pipelines/Smoking/Smoking.pick.unique.good.filter.unique.precluster.pick.nr_v138.wang.pick.taxonomy
+#pipelines/Smoking/Smoking.pick.unique.good.filter.unique.precluster.pick.nr_v138.wang.accnos
+#pipelines/Smoking/Smoking.pick.unique.good.filter.pick.pick.names
+#pipelines/Smoking/Smoking.pick.unique.good.filter.unique.precluster.pick.pick.fasta
+#pipelines/Smoking/Smoking.good.pick.pick.groups
+#pipelines/Smoking/Smoking.pick.unique.good.filter.unique.precluster.pick.nr_v138.wang.pick.taxonomy
+#pipelines/Smoking/Smoking.pick.unique.good.filter.unique.precluster.pick.nr_v138.wang.accnos
+#pipelines/Smoking/Smoking.pick.unique.good.filter.pick.pick.names
+#pipelines/Smoking/Smoking.pick.unique.good.filter.unique.precluster.pick.pick.fasta
+#pipelines/Smoking/Smoking.good.pick.pick.groups
+
+
+#-rw-r--r-- 1 tcickovs user      72353 Mar  4 12:58  Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.current.wang.pick.taxonomy
+#-rw-r--r-- 1 tcickovs user    1055887 Mar  4 12:58  Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.current.wang.accnos
+#-rw-r--r-- 1 tcickovs user      15793 Mar  4 12:58  Smoking.pick.unique.good.filter.unique.precluster.redundant.pick.pick.names
+#-rw-r--r-- 1 tcickovs user     602560 Mar  4 12:59  Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.fasta
+#-rw-r--r-- 1 tcickovs user      13949 Mar  4 12:59  Smoking.pick.unique.good.filter.unique.precluster.redundant.pick.pick.groups
+#-rw-r--r-- 1 tcickovs user      16090 Mar  4 12:59  Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.summary
+
+
+
+
+#Set input and output directories
+set.dir(tempdefault=~/mothur/reference/)
+set.dir(output=pipelines/Smoking/Mothur/)
+
+#Set current files
+#set.current(fasta=pipelines/Smoking/Smoking.pick.unique.good.filter.unique.precluster.pick.pick.fasta, name=pipelines/Smoking/Smoking.pick.unique.good.filter.pick.pick.names, group=pipelines/Smoking/Smoking.good.pick.pick.groups, taxonomy=pipelines/Smoking/Smoking.pick.unique.good.filter.unique.precluster.pick.nr_v138.wang.pick.taxonomy, processors=32)
+set.current(fasta=pipelines/Smoking/Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.fasta, name=pipelines/Smoking/Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.pick.pick.names, group=pipelines/Smoking/Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.pick.pick.groups, taxonomy=pipelines/Smoking/Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.current.wang.pick.taxonomy, processors=32)
+
+
+#Create distance matrix for clustering OTUs
+dist.seqs(fasta=current, cutoff=0.10, processors=32)
+cluster(column=current, name=current)
+make.shared(list=current, group=current, label=0.03)
+summary.single(calc=invsimpson-nseqs-coverage-npshannon-simpson-sobs-chao)
+
+#Main output for read counts
+classify.otu(list=current, name=current, group=current, taxonomy=current, persample=true, probs=f, label=0.03)

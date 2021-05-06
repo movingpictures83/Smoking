@@ -1,0 +1,7 @@
+set.dir(output=pipelines/Smoking/Mothur/)
+get.oturep(column=pipelines/Smoking/Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.dist, list=pipelines/Smoking/Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.list, fasta=pipelines/Smoking/Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.fasta, name=pipelines/Smoking/Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.pick.pick.names)
+dist.seqs(pipelines/Smoking/Mothur/fasta=Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.0.03.rep.converted.fasta, output=lt, processors=8)
+
+set.dir(output=pipelines/Smoking/Qiime/)
+make.biom(shared=pipelines/Smoking/Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.shared, constaxonomy=pipelines/Smoking/Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.taxonomy)
+clearcut(phylip=pipelines/Smoking/Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.0.03.rep.converted.phylip.dist)
