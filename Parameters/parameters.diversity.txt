@@ -1,0 +1,5 @@
+otufile	pipelines/Smoking/PhyloSeq/otu_table.final.csv
+mapping	pipelines/Smoking/PhyloSeq/sample_data.csv
+tree	pipelines/Smoking/PhyloSeq/tax_table.final.csv
+column	Description
+measure InvSimpson

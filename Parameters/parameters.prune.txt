@@ -1,0 +1,5 @@
+otu	PhyloSeq/otu_table.csv
+tax	PhyloSeq/tax_table.csv
+pattern	Halomon
+newotu	otu_table.filtered.csv
+newtax	tax_table.filtered.csv

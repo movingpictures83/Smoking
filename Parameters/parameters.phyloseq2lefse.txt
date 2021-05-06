@@ -1,0 +1,3 @@
+OTU	PhyloSeq/otu_table.final.csv
+TAX	PhyloSeq/tax_table.final.csv
+META	PhyloSeq/sample_data.csv

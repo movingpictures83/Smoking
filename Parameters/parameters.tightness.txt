@@ -1,0 +1,4 @@
+unthresholded	Smoking.sparcc.unthresholded.quoted.unpadded.csv
+thresholded	Smoking.sparcc.thresholded.quoted.unpadded.csv
+clusters	Smoking.sparcc.mcl.sortedclusters.csv
+

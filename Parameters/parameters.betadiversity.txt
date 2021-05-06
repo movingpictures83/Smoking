@@ -1,0 +1,5 @@
+biomfile	pipelines/Smoking/Qiime/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.0.03.biom
+tree	pipelines/Smoking/Qiime/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.0.03.rep.converted.phylip.tre
+euclidean
+weighted_unifrac
+unweighted_unifrac

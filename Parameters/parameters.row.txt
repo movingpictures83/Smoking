@@ -1,0 +1,2 @@
+inputfile	Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.shared	
+row	2

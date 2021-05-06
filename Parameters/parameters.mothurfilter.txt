@@ -1,0 +1,6 @@
+shared	Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.shared
+taxonomy	Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.taxonomy
+metadata	final_metadata.csv
+threshold	0.5
+sharedout	Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.out.shared
+taxonomyout	Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.out.taxonomy
