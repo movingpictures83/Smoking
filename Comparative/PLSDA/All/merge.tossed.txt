@@ -1,0 +1,3 @@
+../../../Individual/Active/Smoking.abund.all.norm.tossed.csv
+../../../Individual/Former/Smoking.abund.all.norm.tossed.csv
+../../../Individual/Never/Smoking.abund.all.norm.tossed.csv
