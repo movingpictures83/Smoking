@@ -1,5 +1,5 @@
 Prefix pipelines/Smoking/
-#Plugin Mothur inputfile Mothur/Denoise.mothur outputfile none
-#Plugin Mothur inputfile Mothur/MergeFASTA.mothur outputfile none
-#Plugin Mothur inputfile Mothur/Preprocessing.mothur outputfile none
+Plugin Mothur inputfile Mothur/Denoise.mothur outputfile none
+Plugin Mothur inputfile Mothur/MergeFASTA.mothur outputfile none
+Plugin Mothur inputfile Mothur/Preprocessing.mothur outputfile none
 Plugin Mothur inputfile Mothur/OTUAnalysis.mothur outputfile none

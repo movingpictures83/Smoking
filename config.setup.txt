@@ -1,22 +1,22 @@
 Prefix pipelines/Smoking/
-#Plugin RemoveRow inputfile Parameters/parameters.row.txt outputfile Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.final.shared
-#Plugin Copy inputfile Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.taxonomy outputfile Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.final.taxonomy
-#Plugin CountTableProcessing inputfile Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.final outputfile Smoking.abund.all.withhalo.csv
-#Plugin RemoveTaxa inputfile Remove/remove.halomonas.txt outputfile Smoking.abund.all.withzero.csv
-#Plugin RemoveZero inputfile Smoking.abund.all.withzero.csv outputfile Smoking.abund.all.csv
-#Plugin CSVNormalize inputfile Smoking.abund.all.csv outputfile Smoking.abund.all.norm.csv
+Plugin RemoveRow inputfile Parameters/parameters.row.txt outputfile Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.final.shared
+Plugin Copy inputfile Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.taxonomy outputfile Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.final.taxonomy
+Plugin CountTableProcessing inputfile Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.final outputfile Smoking.abund.all.withhalo.csv
+Plugin RemoveTaxa inputfile Remove/remove.halomonas.txt outputfile Smoking.abund.all.withzero.csv
+Plugin RemoveZero inputfile Smoking.abund.all.withzero.csv outputfile Smoking.abund.all.csv
+Plugin CSVNormalize inputfile Smoking.abund.all.csv outputfile Smoking.abund.all.norm.csv
 
-#Plugin Mothur2PhyloSeq inputfile Parameters/parameters.mothur2phyloseq.txt outputfile PhyloSeq/
-#Plugin TaxaPrune inputfile Parameters/parameters.prune.txt outputfile PhyloSeq/
-#Plugin PhyloSeqReorder inputfile Parameters/parameters.reorder.txt outputfile PhyloSeq/otu_table.filtered.reordered.csv
-#Plugin PhyloSeqFilter inputfile filter.txt outputfile PhyloSeq/
+Plugin Mothur2PhyloSeq inputfile Parameters/parameters.mothur2phyloseq.txt outputfile PhyloSeq/
+Plugin TaxaPrune inputfile Parameters/parameters.prune.txt outputfile PhyloSeq/
+Plugin PhyloSeqReorder inputfile Parameters/parameters.reorder.txt outputfile PhyloSeq/otu_table.filtered.reordered.csv
+Plugin PhyloSeqFilter inputfile filter.txt outputfile PhyloSeq/
 
-#Kitty Individual/Active/
-#Plugin Subset inputfile parameters.subset.txt outputfile PhyloSeq/
-#Kitty Individual/Former/
-#Plugin Subset inputfile parameters.subset.txt outputfile PhyloSeq/
-#Kitty Individual/Never/
-#Plugin Subset inputfile parameters.subset.txt outputfile PhyloSeq/
+Kitty Individual/Active/
+Plugin Subset inputfile parameters.subset.txt outputfile PhyloSeq/
+Kitty Individual/Former/
+Plugin Subset inputfile parameters.subset.txt outputfile PhyloSeq/
+Kitty Individual/Never/
+Plugin Subset inputfile parameters.subset.txt outputfile PhyloSeq/
 
 Kitty Individual/Active/PhyloSeq
 Plugin PhyloSeqNormalize inputfile otu_table.csv outputfile otu_table.norm.csv
@@ -27,24 +27,24 @@ Plugin PhyloSeqNormalize inputfile otu_table.csv outputfile otu_table.norm.csv
 
 
 # Merge with metadata and screen
-#Plugin CSVMerge inputfile Merge/merge.txt outputfile Smoking.abund.all.withmeta.csv
-#Plugin CSVMerge inputfile Merge/merge.norm.txt outputfile Smoking.abund.all.norm.withmeta.csv
-#Plugin CSVScreen inputfile Screen/screen.txt outputfile Smoking.abund.all.withmeta.screened.csv
-#Plugin CSVScreen inputfile Screen/screen.norm.txt outputfile Smoking.abund.all.norm.withmeta.screened.csv
+Plugin CSVMerge inputfile Merge/merge.txt outputfile Smoking.abund.all.withmeta.csv
+Plugin CSVMerge inputfile Merge/merge.norm.txt outputfile Smoking.abund.all.norm.withmeta.csv
+Plugin CSVScreen inputfile Screen/screen.txt outputfile Smoking.abund.all.withmeta.screened.csv
+Plugin CSVScreen inputfile Screen/screen.norm.txt outputfile Smoking.abund.all.norm.withmeta.screened.csv
 
 # Extract three groups
-#Plugin CSVExtract inputfile Extract/extract.Active.txt outputfile Individual/Active/Smoking.abund.all.withmeta.csv
-#Plugin CSVExtract inputfile Extract/extract.Active.norm.txt outputfile Individual/Active/Smoking.abund.all.norm.withmeta.csv
-#Plugin CSVExtract inputfile Extract/extract.Former.txt outputfile Individual/Former/Smoking.abund.all.withmeta.csv
-#Plugin CSVExtract inputfile Extract/extract.Former.norm.txt outputfile Individual/Former/Smoking.abund.all.norm.withmeta.csv
-#Plugin CSVExtract inputfile Extract/extract.Never.txt outputfile Individual/Never/Smoking.abund.all.withmeta.csv
-#Plugin CSVExtract inputfile Extract/extract.Never.norm.txt outputfile Individual/Never/Smoking.abund.all.norm.withmeta.csv
+Plugin CSVExtract inputfile Extract/extract.Active.txt outputfile Individual/Active/Smoking.abund.all.withmeta.csv
+Plugin CSVExtract inputfile Extract/extract.Active.norm.txt outputfile Individual/Active/Smoking.abund.all.norm.withmeta.csv
+Plugin CSVExtract inputfile Extract/extract.Former.txt outputfile Individual/Former/Smoking.abund.all.withmeta.csv
+Plugin CSVExtract inputfile Extract/extract.Former.norm.txt outputfile Individual/Former/Smoking.abund.all.norm.withmeta.csv
+Plugin CSVExtract inputfile Extract/extract.Never.txt outputfile Individual/Never/Smoking.abund.all.withmeta.csv
+Plugin CSVExtract inputfile Extract/extract.Never.norm.txt outputfile Individual/Never/Smoking.abund.all.norm.withmeta.csv
 
 # Filter
-#Kitty Individual/Active
-#Pipeline pipelines/Smoking/config.filter.txt
-#Kitty Individual/Former
-#Pipeline pipelines/Smoking/config.filter.txt
-#Kitty Individual/Never
-#Pipeline pipelines/Smoking/config.filter.txt
+Kitty Individual/Active
+Pipeline pipelines/Smoking/config.filter.txt
+Kitty Individual/Former
+Pipeline pipelines/Smoking/config.filter.txt
+Kitty Individual/Never
+Pipeline pipelines/Smoking/config.filter.txt
 

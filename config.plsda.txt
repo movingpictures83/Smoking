@@ -5,6 +5,6 @@
 
 # Output will be in a single PDF file with all four plots (Rplots.pdf)
 
-#Plugin CSVMerge inputfile merge.tossed.txt outputfile Smoking.abund.all.norm.tossed.csv
-#Plugin CSV2PLSDA inputfile ../../../Parameters/parameters.csv2plsda.txt outputfile .
+Plugin CSVMerge inputfile merge.tossed.txt outputfile Smoking.abund.all.norm.tossed.csv
+Plugin CSV2PLSDA inputfile ../../../Parameters/parameters.csv2plsda.txt outputfile .
 Plugin PLSDA inputfile ../../../Parameters/parameters.plsda.txt outputfile plsda

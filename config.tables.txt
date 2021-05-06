@@ -1,9 +1,9 @@
 Prefix pipelines/Smoking/
 
-#Kitty Comparative/DESeq2/Active-Former
-#Pipeline pipelines/Smoking/config.deseq.txt
-#Kitty Comparative/DESeq2/Active-Never
-#Pipeline pipelines/Smoking/config.deseq.txt
-#Kitty Comparative/DESeq2/Former-Never
-#Pipeline pipelines/Smoking/config.deseq.txt
+Kitty Comparative/DESeq2/Active-Former
+Pipeline pipelines/Smoking/config.deseq.txt
+Kitty Comparative/DESeq2/Active-Never
+Pipeline pipelines/Smoking/config.deseq.txt
+Kitty Comparative/DESeq2/Former-Never
+Pipeline pipelines/Smoking/config.deseq.txt
 
