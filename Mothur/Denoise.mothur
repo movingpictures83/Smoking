@@ -8,34 +8,34 @@ set.dir(tempdefault=~/mothur/reference)
 ###########################################################################################
 
 # Pool_06
-set.dir(output=pipelines/Smoking/Pools/Pool_06/shhh/))
+set.dir(output=pipelines/Smoking/Pools/Pool_06/shhh/)
 shhh.flows(file=pipelines/Smoking/Pools/Pool_06/Pool_06.flow.files, processors=32)
 trim.seqs(fasta=pipelines/Smoking/Pools/Pool_06/Pool_06.shhh.fasta, name=pipelines/Smoking/Pools/Pool_06/Pool_06.shhh.names, oligos=pipelines/Smoking/Pools/Pool_06/Pool_06.oligos, pdiffs=2, bdiffs=1, maxhomop=8, minlength=200, flip=T, processors=32)
 unique.seqs(fasta=current, name=current)
 summary.seqs(fasta=current, name=current)
 
 # Pool_07
-set.dir(output=pipelines/Smoking/Pools/Pool_07/shhh/))
+set.dir(output=pipelines/Smoking/Pools/Pool_07/shhh/)
 shhh.flows(file=pipelines/Smoking/Pools/Pool_07/Pool_07.flow.files, processors=32)
 trim.seqs(fasta=pipelines/Smoking/Pools/Pool_07/Pool_07.shhh.fasta, name=pipelines/Smoking/Pools/Pool_07/Pool_07.shhh.names, oligos=pipelines/Smoking/Pools/Pool_07/Pool_07.oligos, pdiffs=2, bdiffs=1, maxhomop=8, minlength=200, flip=T, processors=32)
 summary.seqs(fasta=current, name=current)
 
 # Pool_08
-set.dir(output=pipelines/Smoking/Pools/Pool_08/shhh/))
+set.dir(output=pipelines/Smoking/Pools/Pool_08/shhh/)
 shhh.flows(file=pipelines/Smoking/Pools/Pool_08/Pool_08.flow.files, processors=32)
 trim.seqs(fasta=pipelines/Smoking/Pools/Pool_08/Pool_08.shhh.fasta, name=pipelines/Smoking/Pools/Pool_08/Pool_08.shhh.names, oligos=pipelines/Smoking/Pools/Pool_08/Pool_08.oligos, pdiffs=2, bdiffs=1, maxhomop=8, minlength=200, flip=T, processors=32)
 summary.seqs(fasta=current, name=current)
 
 
 # Pool_09
-set.dir(output=pipelines/Smoking/Pools/Pool_09/shhh/))
+set.dir(output=pipelines/Smoking/Pools/Pool_09/shhh/)
 shhh.flows(file=pipelines/Smoking/Pools/Pool_09/Pool_09.flow.files, processors=32)
 trim.seqs(fasta=pipelines/Smoking/Pools/Pool_09/Pool_09.shhh.fasta, name=pipelines/Smoking/Pools/Pool_09/Pool_09.shhh.names, oligos=pipelines/Smoking/Pools/Pool_09/Pool_09.oligos, pdiffs=2, bdiffs=1, maxhomop=8, minlength=200, flip=T, processors=32)
 summary.seqs(fasta=current, name=current)
 
 
 # Pool_10
-set.dir(output=pipelines/Smoking/Pools/Pool_10/shhh/))
+set.dir(output=pipelines/Smoking/Pools/Pool_10/shhh/)
 shhh.flows(file=pipelines/Smoking/Pools/Pool_10/Pool_10.flow.files, processors=32)
 trim.seqs(fasta=pipelines/Smoking/Pools/Pool_10/Pool_10.shhh.fasta, name=pipelines/Smoking/Pools/Pool_10/Pool_10.shhh.names, oligos=pipelines/Smoking/Pools/Pool_10/Pool_10.oligos, pdiffs=2, bdiffs=1, maxhomop=8, minlength=200, flip=T, processors=32)
 summary.seqs(fasta=current, name=current)
