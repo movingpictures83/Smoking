@@ -1,0 +1,9 @@
+Prefix pipelines/Smoking
+Kitty Comparative/ANCOMBC
+Plugin ANCOMBC inputfile parameters.allthree.txt outputfile allthree.csv
+Kitty Comparative/ANCOMBC/Active-Former
+Pipeline pipelines/Smoking/config.ancombc.txt
+Kitty Comparative/ANCOMBC/Active-Never
+Pipeline pipelines/Smoking/config.ancombc.txt
+Kitty Comparative/ANCOMBC/Former-Never
+Pipeline pipelines/Smoking/config.ancombc.txt
