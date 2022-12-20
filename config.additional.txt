@@ -14,10 +14,14 @@ Prefix pipelines/Smoking
 #Pipeline pipelines/Smoking/config.deseq2.phylum.txt
 #Kitty Comparative/DESeq2/Former-Never/
 #Pipeline pipelines/Smoking/config.deseq2.phylum.txt
-Kitty .
-Plugin CSVIndex inputfile Parameters/parameters.csvindex.txt outputfile Comparative/Alpha/richness.indexed.results.csv
-Plugin CSVReplace inputfile Parameters/parameters.csvreplace.richness.txt outputfile Comparative/Alpha/richness.indexed.csv
-Plugin ANOVA inputfile Comparative/Alpha/richness.indexed.csv outputfile none
-Plugin CSVIndex inputfile Parameters/parameters.csvindex.diversity.txt outputfile Comparative/Alpha/diversity.indexed.results.csv
-Plugin CSVReplace inputfile Parameters/parameters.csvreplace.diversity.txt outputfile Comparative/Alpha/diversity.indexed.csv
-Plugin ANOVA inputfile Comparative/Alpha/diversity.indexed.csv outputfile none
+#Kitty .
+#Plugin CSVIndex inputfile Parameters/parameters.csvindex.txt outputfile Comparative/Alpha/richness.indexed.results.csv
+#Plugin CSVReplace inputfile Parameters/parameters.csvreplace.richness.txt outputfile Comparative/Alpha/richness.indexed.csv
+#Plugin ANOVA inputfile Comparative/Alpha/richness.indexed.csv outputfile none
+#Plugin CSVIndex inputfile Parameters/parameters.csvindex.diversity.txt outputfile Comparative/Alpha/diversity.indexed.results.csv
+#Plugin CSVReplace inputfile Parameters/parameters.csvreplace.diversity.txt outputfile Comparative/Alpha/diversity.indexed.csv
+#Plugin ANOVA inputfile Comparative/Alpha/diversity.indexed.csv outputfile none
+
+Plugin PhylogeneticTree inputfile Parameters/parameters.phylogenetictree.txt outputfile newtree.tre
+Plugin CSVTranspose inputfile PhyloSeq/otu_table.final.csv outputfile PhyloSeq/otu_table.final.transpose.csv
+Plugin Faith inputfile Parameters/parameters.faith.txt outputfile Comparative/Alpha/faith.csv

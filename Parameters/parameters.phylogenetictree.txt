@@ -1,0 +1,4 @@
+OTU	PhyloSeq/otu_table.final.csv
+TAX	PhyloSeq/tax_table.final.csv
+META	PhyloSeq/sample_data.csv
+PHYLIP	Mothur/Smoking.pick.unique.good.filter.unique.precluster.redundant.unique.pick.pick.opti_mcc.0.03.rep.converted.phylip.tre
