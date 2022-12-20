@@ -1,0 +1,5 @@
+taxa	otu_table.final.correctnames.transpose.csv
+deseq	phylum_level/Smoking.deseq.csv
+group1	Active
+group2	Former
+pvalue	0.05

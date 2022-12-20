@@ -1,0 +1,6 @@
+OTU ../../../PhyloSeqMixToss/otu_table.final.csv
+TAX    ../../../PhyloSeqMixToss/tax_table.final.csv
+META ../../../PhyloSeqMixToss/sample_data.csv
+FILTER1	Former
+FILTER2	Never
+column	Description
