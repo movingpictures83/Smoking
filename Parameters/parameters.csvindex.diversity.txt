@@ -1,0 +1,2 @@
+csvfile	Comparative/Alpha/diversity.csv
+indexfile	indices.txt

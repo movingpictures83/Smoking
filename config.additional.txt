@@ -8,9 +8,16 @@ Prefix pipelines/Smoking
 #Kitty Comparative/ANCOMBC/Former-Never
 #Pipeline pipelines/Smoking/config.ancombc.txt
 
-Kitty Comparative/DESeq2/Active-Former/
-Pipeline pipelines/Smoking/config.deseq2.phylum.txt
-Kitty Comparative/DESeq2/Active-Never/
-Pipeline pipelines/Smoking/config.deseq2.phylum.txt
-Kitty Comparative/DESeq2/Former-Never/
-Pipeline pipelines/Smoking/config.deseq2.phylum.txt
+#Kitty Comparative/DESeq2/Active-Former/
+#Pipeline pipelines/Smoking/config.deseq2.phylum.txt
+#Kitty Comparative/DESeq2/Active-Never/
+#Pipeline pipelines/Smoking/config.deseq2.phylum.txt
+#Kitty Comparative/DESeq2/Former-Never/
+#Pipeline pipelines/Smoking/config.deseq2.phylum.txt
+Kitty .
+Plugin CSVIndex inputfile Parameters/parameters.csvindex.txt outputfile Comparative/Alpha/richness.indexed.results.csv
+Plugin CSVReplace inputfile Parameters/parameters.csvreplace.richness.txt outputfile Comparative/Alpha/richness.indexed.csv
+Plugin ANOVA inputfile Comparative/Alpha/richness.indexed.csv outputfile none
+Plugin CSVIndex inputfile Parameters/parameters.csvindex.diversity.txt outputfile Comparative/Alpha/diversity.indexed.results.csv
+Plugin CSVReplace inputfile Parameters/parameters.csvreplace.diversity.txt outputfile Comparative/Alpha/diversity.indexed.csv
+Plugin ANOVA inputfile Comparative/Alpha/diversity.indexed.csv outputfile none

@@ -1,0 +1,2 @@
+csvfile	Comparative/Alpha/richness.csv
+indexfile	indices.txt
