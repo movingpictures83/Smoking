@@ -1,0 +1,2 @@
+csvfile	Comparative/Alpha/richness.sliced.csv
+values	values.richness.txt

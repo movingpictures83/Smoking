@@ -1,0 +1,2 @@
+Comparative/Alpha/richness.sliced.replaced.csv
+Comparative/Alpha/diversity.sliced.replaced.csv

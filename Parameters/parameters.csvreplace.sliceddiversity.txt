@@ -1,0 +1,2 @@
+csvfile	Comparative/Alpha/diversity.sliced.csv
+values	values.diversity.txt
