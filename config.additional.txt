@@ -25,3 +25,7 @@ Prefix pipelines/Smoking
 Plugin PhylogeneticTree inputfile Parameters/parameters.phylogenetictree.txt outputfile newtree.tre
 Plugin CSVTranspose inputfile PhyloSeq/otu_table.final.csv outputfile PhyloSeq/otu_table.final.transpose.csv
 Plugin Faith inputfile Parameters/parameters.faith.txt outputfile Comparative/Alpha/faith.csv
+Plugin CSVPad inputfile Comparative/Alpha/faith.csv outputfile Comparative/Alpha/faith.padded.csv
+Plugin CSVRemove inputfile Parameters/parameters.remove.txt outputfile Comparative/Alpha/faith.removed.csv
+Plugin CSVReplace inputfile Parameters/parameters.csvreplace.faith.txt outputfile Comparative/Alpha/faith.indexed.csv
+Plugin ANOVA inputfile Comparative/Alpha/faith.indexed.csv outputfile none
