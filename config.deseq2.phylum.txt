@@ -1,0 +1,9 @@
+Plugin PhyloSeqExtractTwo inputfile parameters.pset.txt outputfile output
+Plugin PhyloSeqGlom inputfile ../parameters.glom.txt outputfile phylum_level
+Plugin PhyloSeqRemoveNull inputfile phylum_level/otu_table.csv outputfile phylum_level/otu_table.final.csv
+Plugin PhyloSeqRemoveNull inputfile phylum_level/taxonomy_table.csv outputfile phylum_level/taxonomy_table.final.csv
+Plugin PhyloSeqRemoveNull inputfile phylum_level/metadata_table.csv outputfile phylum_level/metadata_table.final.csv
+Plugin PhyloSeq2CSV inputfile ../parameters.ps2csv.txt outputfile phylum_level/otu_table.final.correctnames.csv
+Plugin CSVTranspose inputfile phylum_level/otu_table.final.correctnames.csv outputfile phylum_level/otu_table.final.correctnames.transpose.csv
+Plugin DESeq inputfile ../../../Parameters/parameters.deseq.phylum.txt outputfile phylum_level/Smoking.deseq.csv
+Plugin DESeq2TXT inputfile parameters.deseq2txt.phylum.txt outputfile phylum_level/Smoking.deseq.txt
