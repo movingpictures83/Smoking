@@ -1,0 +1,3 @@
+abundance	phylum_level/otu_table.final.csv
+taxonomy	phylum_level/taxonomy_table.final.csv
+level	2
