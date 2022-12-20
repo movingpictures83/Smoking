@@ -1,0 +1,2 @@
+tsvfile	Comparative/Beta/unweighted_unifrac_dm.txt
+indexfile	indices.tsvremove.txt
