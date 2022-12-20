@@ -1,0 +1,2 @@
+groupfile	sample_data.permanova.csv
+distfile Comparative/Beta//unweighted_unifrac_dm.csv

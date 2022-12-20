@@ -43,5 +43,10 @@ Prefix pipelines/Smoking
 #Plugin Pearson inputfile Comparative/Alpha/richness_and_diversity.former.csv outputfile Comparative/Alpha/richness_and_diversity.former.pearson.csv
 #Plugin Pearson inputfile Comparative/Alpha/richness_and_diversity.never.csv outputfile Comparative/Alpha/richness_and_diversity.never.pearson.csv
 
-Plugin TSVRemove inputfile Parameters/parameters.tsvremove.txt outputfile Comparative/Beta/dm.txt
-Plugin BetaDisper inputfile Parameters/parameters.betadisper.txt outputfile none
+#Plugin TSVRemove inputfile Parameters/parameters.tsvremove.txt outputfile Comparative/Beta/dm.txt
+#Plugin BetaDisper inputfile Parameters/parameters.betadisper.txt outputfile none
+
+Plugin TSV2CSV inputfile Comparative/Beta/unweighted_unifrac_dm.txt outputfile Comparative/Beta/unweighted_unifrac_dm.csv
+Plugin CSVUnQuote inputfile PhyloSeq/sample_data.csv outputfile sample_data.unquoted.csv
+Plugin CSVReplace inputfile Parameters/parameters.csvreplace.permanova.txt outputfile sample_data.permanova.csv
+Plugin PERMANOVA inputfile filenames.txt outputfile Comparative/Beta/permanova.txt
